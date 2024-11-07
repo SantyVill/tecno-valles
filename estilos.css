@@ -49,10 +49,18 @@ nav a {
     margin: 0 10px;
 }
 /* ESTILOS PARA EL MAIN */
-main{
-    background: radial-gradient(turquoise,rgb(30, 107, 99));
+main {
+    position: relative;
     margin: 0;
     padding-top: 1em;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, turquoise, rgb(30, 107, 99));
+    z-index: -3; /* Coloca este fondo detrás de todo el contenido del main */
 }
 .titulo-producto{
     margin: 0;
@@ -84,6 +92,7 @@ main{
 
 .product-item h3{
     color: aliceblue;
+    margin: 0;
 }
 
 #contacto, #sociales {
@@ -138,8 +147,8 @@ hr{
     width: 224px;
     height: 289px;
     border-radius: 10px;
-    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
-    z-index: -10;
+    background: linear-gradient(-45deg, #e81cff 0%, #2fa3d1 100% );
+    z-index: -2;
     pointer-events: none;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
