@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tecnovalles - Productos Electrónicos</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -12,21 +13,24 @@
         <!-- <img src="img/portada2.jpg" alt="Portada de Tecnovalles" class="portada"> -->
     </header>
     <main>
-        
         <section id="productos">
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="fullImage">
+            </div>
             <h2>Nuestros Productos</h2>
             <article>
                 <h2 class="titulo-producto">Smartwatch</h2>
                 <div class="product-list">
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/reloj.jpg')">
                         <img src="img/productos/reloj.jpg" alt="Smartwatch">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/reloj2.jpg')">
                         <img src="img/productos/reloj2.jpg" alt="Smartwatch">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/reloj3.png')">
                         <img src="img/productos/reloj3.png" alt="Smartwatch">
                         <!-- <h3>Auriculares</h3> -->
                     </div>
@@ -36,23 +40,23 @@
             <article>
                 <h2 class="titulo-producto">Sonido</h2>
                 <div class="product-list">
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/parlante.png" alt="Sonido">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/parlante2.png" alt="Sonido">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/sonido.png" alt="Sonido">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/sonido2.png" alt="Sonido">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/sonido3.png" alt="Sonido">
                         <h3>Vaso con Parlante</h3>
                     </div>
@@ -62,15 +66,15 @@
             <article>
                 <h2 class="titulo-producto">Cargadores</h2>
                 <div class="product-list">
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/cargador.png" alt="Cargadores">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/cargador2.png" alt="Cargadores">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/cargador3.png" alt="Cargadores">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
@@ -80,23 +84,23 @@
             <article>
                 <h2 class="titulo-producto">Cables</h2>
                 <div class="product-list">
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/cableusb.png" alt="Cables">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/cable2.png" alt="Cables">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/cable3.png" alt="Cables">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/cable4.png" alt="Cables">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/cable5.png" alt="Cables">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
@@ -106,24 +110,28 @@
             <article>
                 <h2 class="titulo-producto">Iluminación</h2>
                 <div class="product-list">
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/iluminacion.png" alt="iluminacion">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/iluminacion2.png" alt="iluminacion">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/iluminacion3.png" alt="iluminacion">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/linterna.png" alt="iluminacion">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/iluminacion4.png" alt="iluminacion">
+                        <!-- <h3>T900-Ultra</h3> -->
+                    </div>
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
+                        <img src="img/productos/iluminacion6.jpg" alt="iluminacion">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
                 </div>
@@ -132,24 +140,24 @@
             <article>
                 <h2 class="titulo-producto">Auriculares</h2>
                 <div class="product-list">
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/auriculares.png" alt="Auriculares">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/auriculares2.png" alt="Auriculares">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/auriculares3.png" alt="Auriculares">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/auriculares4.png" alt="Auriculares">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
-                        <img src="img/productos/auriculares5.png" alt="Cables">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
+                        <img src="img/productos/auriculares5.png" alt="Auriculares">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
                 </div>
@@ -158,39 +166,39 @@
             <article>
                 <h2 class="titulo-producto">Hogar</h2>
                 <div class="product-list">
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/hogar2.png" alt="hogar2">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/hogar3.png" alt="hogar3">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/hogar4.png" alt="hogar3">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/hogar5.png" alt="hogar3">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/hogar6.png" alt="hogar3">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/hogar7.png" alt="hogar3">
                         <h3>Humificador</h3>
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/hogar8.png" alt="hogar3">
                         <h3>Timbre</h3>
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/hogar9.png" alt="hogar3">
                         <h3>Timbre</h3>
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/hogar10.png" alt="hogar3">
                         <!-- <h3>Timbre</h3> -->
                     </div>
@@ -200,19 +208,19 @@
             <article>
                 <h2 class="titulo-producto">Belleza</h2>
                 <div class="product-list">
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/Belleza.png" alt="Belleza">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/belleza2.png" alt="Belleza">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/belleza3.png" alt="Belleza">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/belleza4.png" alt="Belleza">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
@@ -222,31 +230,31 @@
             <article>
                 <h2 class="titulo-producto">Tecnología</h2>
                 <div class="product-list">
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/tecnologia.png" alt="tecnologia">
                         <h3>Protector de alta y baja tensión</h3>
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/tecnologia2.png" alt="tecnologia">
                         <h3>Protector de alta y baja tensión</h3>
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/tecnologia3.png" alt="tecnologia">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/tecnologia4.png" alt="tecnologia">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/tecnologia6.png" alt="tecnologia">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/tecnologia7.png" alt="tecnologia">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/tecnologia8.png" alt="tecnologia">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
@@ -256,15 +264,15 @@
             <article>
                 <h2 class="titulo-producto">Herramientas</h2>
                 <div class="product-list">
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/herramienta.png" alt="herramienta">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/herramienta2.png" alt="herramienta">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
                         <img src="img/productos/herramienta3.png" alt="herramienta">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
@@ -274,32 +282,32 @@
             <article>
                 <h2 class="titulo-producto">Artículos varios</h2>
                 <div class="product-list">
-                    <div class="product-item card">
-                        <img src="img/productos/varios.png" alt="herramienta">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
+                        <img src="img/productos/varios.png" alt="varios">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
-                        <img src="img/productos/varios2.png" alt="herramienta">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
+                        <img src="img/productos/varios2.png" alt="varios">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
-                        <img src="img/productos/varios3.png" alt="herramienta">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
+                        <img src="img/productos/varios3.png" alt="varios">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
-                        <img src="img/productos/varios4.png" alt="herramienta">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
+                        <img src="img/productos/varios4.png" alt="varios">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
-                        <img src="img/productos/varios5.png" alt="herramienta">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
+                        <img src="img/productos/varios5.png" alt="varios">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
-                        <img src="img/productos/varios6.png" alt="herramienta">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
+                        <img src="img/productos/varios6.png" alt="varios">
                         <!-- <h3>T900-Ultra</h3> -->
                     </div>
-                    <div class="product-item card">
-                        <img src="img/productos/varios7.png" alt="herramienta">
+                    <div class="product-item card" onclick="showImage('img/productos/varios.png')">
+                        <img src="img/productos/varios7.png" alt="varios">
                         <h3>Vaper recargable</h3>
                     </div>
                 </div>

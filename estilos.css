@@ -195,3 +195,87 @@ hr{
 .card:hover::before {
     transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
 }
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
+/* Estilo para la imagen ampliada */
+.modal-content {
+    margin: auto;
+    display: flex;
+    width: 40%;
+    position: absolute;
+    top: 25%;
+    max-width: 700px;
+    animation: zoomIn 0.6s;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animación de zoom */
+@keyframes zoomIn {
+    from {transform: scale(0.4)}
+    to {transform: scale(1)}
+}
+
+/* Botón de cerrar */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 150px;
+        height: 200px;
+        padding: 8px;
+        gap: 8px;
+        margin: 5px 0;
+    }
+
+    .card::before {
+        width: 175px;
+        height: 225px;
+        left: -5px;
+    }
+
+    .card::after {
+        transform: translate3d(0, 0, 0) scale(0.9);
+        filter: blur(15px);
+    }
+
+    .heading {
+        font-size: 16px;
+    }
+
+    .card p:not(.heading) {
+        font-size: 12px;
+    }
+
+    .card p:last-child {
+        font-size: 12px;
+    }
+}
